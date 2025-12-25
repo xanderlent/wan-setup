@@ -13,6 +13,8 @@ RUN pip install --upgrade pip setuptools wheel ninja numpy && \
     pip install diffusers==0.31.0 && \
     pip install peft==0.13.2 && \
     pip install -r requirements.txt --no-deps && \
+    pip install -r requirements_s2v.txt --no-deps && \
+    pip install -r requirements_animate.txt --no-deps && \
     pip install decord librosa accelerate tokenizers tqdm imageio easydict ftfy dashscope imageio-ffmpeg opencv-python
 
 ENTRYPOINT ["python", "generate.py"]
